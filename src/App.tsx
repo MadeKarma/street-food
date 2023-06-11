@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import HomeOld from "./pages/HomeOld";
+import Home from "./pages/HomeNew";
 import Header from "./component/Navbar";
 import About from "./pages/About";
 // import Search from "./component/Search";
@@ -13,7 +14,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/food/:strCategory" element={<DetailCategory />} />
+          {/* <Route path="/food/:strCategory" element={<DetailCategory />} /> */}
+          {/* <Route path="/meal/:idMeal" /> */}
         </Routes>
       </Router>
     </div>

@@ -8,7 +8,13 @@ export default {
     container: {
       center: true
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#457b9d",
+        second: "#1d3557",
+        third: "#1d3557"
+      }
+    },
   },
   plugins: [],
 }

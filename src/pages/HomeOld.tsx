@@ -10,7 +10,7 @@ interface IDataCategory {
   strCategoryDescription: string;
 }
 
-export default function Home() {
+export default function HomeOld() {
   const [dataCategory, setDataCategory] = useState<IDataCategory[]>([]);
   async function getDataCategory() {
     const payload = await foodApi("/categories.php");
@@ -23,7 +23,10 @@ export default function Home() {
 
   return (
     <section className="container pt-28">
-      <div className="grid grid-cols-4 gap-8 py-8">
+      <div className="flex justify-center">
+        <h1 className="text-2xl font-bold">Beragam aneka olahan masakan</h1>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-8">
         {dataCategory.map((data) => {
           console.log(data);
           return (

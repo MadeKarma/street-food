@@ -1,7 +1,7 @@
-import { useParams } from "react-router-dom";
-import foodApi from "../api/foodApi";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import CardFood from "../component/CardFood";
+import foodApi from "../api/foodApi";
 
 interface IMeals {
   idMeal: string;
@@ -10,15 +10,15 @@ interface IMeals {
 }
 
 export default function DetailCategory() {
-  const value = useParams();
+  const { strCategory } = useParams();
   const [categoryMeals, setCategoryMeals] = useState<IMeals[]>([]);
   useEffect(() => {
     async function getCategoryMeals() {
-      const payload = await foodApi(`/filter.php?c=${value.strCategory}`);
+      const payload = await foodApi(`/filter.php?c=${strCategory}`);
       setCategoryMeals(payload.meals);
     }
     getCategoryMeals();
-  }, []);
+  }, [strCategory]);
   console.log(categoryMeals);
 
   return (
