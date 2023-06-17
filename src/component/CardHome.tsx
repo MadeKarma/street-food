@@ -32,12 +32,12 @@ export default function CardHome({
 }: ICardHome) {
   return (
     <div className="bg-white flex flex-col justify-center p-3 relative rounded-[15px] shadow-md">
-      <Link to={direct}>
-        <div className="bg-red-400 h-40 rounded-[15px]">
+      <Link className="outline-1 outline-primary" to={direct} title={meal}>
+        <div className="bg-primary h-40 rounded-[15px]">
           <img
             className="h-full object-center object-cover rounded-[15px] w-full"
             src={thumb}
-            alt="gambar"
+            alt={meal}
           />
         </div>
         <h1 className="font-bold pt-2 text-lg md:text-xl">
@@ -45,13 +45,21 @@ export default function CardHome({
         </h1>
         <div className="flex items-center gap-2 mt-1 text-primary text-sm">
           <div className="flex items-center">
-            <img className="h-[30px]" src={IconMeal} alt="" />
+            <img
+              className="h-[30px] pointer-events-none"
+              src={IconMeal}
+              alt="Icon Meal"
+            />
             <p className="after:content-['|'] after:text-black after:pl-2">
               {category}
             </p>
           </div>
           <div className="flex items-center">
-            <img className="h-[20px] mr-[6px]" src={IconEarth} alt="" />
+            <img
+              className="h-[20px] mr-[6px] pointer-events-none"
+              src={IconEarth}
+              alt="Icon Earth"
+            />
             <p>{area}</p>
           </div>
         </div>

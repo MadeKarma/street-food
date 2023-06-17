@@ -12,7 +12,8 @@ export default {
       colors: {
         primary: "#457b9d",
         second: "#1d3557",
-        third: "#1d3557"
+        third: "#a8dadc",
+        fourth: "#e63946"
       }
     },
   },
